@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name RFC Editor Centered
+@namespace github.com/phoreverpheebs/userstyles/styles/rfc-editor
+@homepageURL https://github.com/phoreverpheebs/userstyles/tree/master/styles/rfc-editor
+@version 0.0.1
+@updateURL https://github.com/phoreverpheebs/userstyles/raw/master/styles/rfc-editor/center.user.css
+@supportURL https://github.com/phoreverpheebs/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Arfc-editor
+@description Centers the content of RFCs
+@author phoebe
+@license MIT
+
+@preprocessor less
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.rfc-editor.org/rfc/") {
+	body {
+		width: fit-content;
+		margin: 16px auto;
+		padding: 32px 96px;
+	}
+}
