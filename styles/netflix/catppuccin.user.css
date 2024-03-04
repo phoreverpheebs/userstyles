@@ -2,7 +2,7 @@
 @name Netflix Catppuccin
 @namespace github.com/phoreverpheebs/userstyles/styles/netflix
 @homepageURL https://github.com/phoreverpheebs/userstyles/tree/master/styles/netflix
-@version 0.0.1
+@version 0.0.2
 @updateURL https://github.com/phoreverpheebs/userstyles/raw/master/styles/netflix/catppuccin.user.css
 @supportURL https://github.com/phoreverpheebs/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Anetflix
 @description Soothing pastel theme for Netflix
@@ -52,614 +52,618 @@
     @crust: @catppuccin[@@lookup][@crust];
     @accent-color: @catppuccin[@@lookup][@@accent];
 
-		color: @text;
+        color: @text;
     background-color: @base;
-		
-		a {
-			color: @text;
-		}
-		
-		body, html {
-			color: @text;
-			background-color: @base;
-		}
-		
-		.profiles-gate-container {
-			background-color: @base;
-			
-			.profile-icon {
-				background-color: @mantle;
-			}
-			
-			.profile-name {
-				color: @subtext0;
-			}
-			
-			li a {
-				&.focused, &:focus, &:hover {
-					.profile-name {
-						color: @text;
-					}
-					
-					.profile-icon {
-						&, &::after {
-							border-color: @text;
-						}
-					}
-				}
-			}
-		}
-		
-		.profile-button {
-			color: @text;
-			border-color: @overlay0;
-			background-color: @base;
-			
-			&:hover {
-				background-color: @mantle;
-			}
-			
-			&.preferred-action {
-				&.preferred-active, &:focus, &:hover {
-					border-color: @accent-color;
-				}
-			}
-		}
-		
-		.list-profiles {
-			.profile-gate-label {
-				color: @text;
-			}
-		}
-		
-		.svg-icon-edit {
-			fill: @text;
-		}
-		
-		#onetrust-consent-sdk {
-			box-shadow: unset;
-			
-			#onetrust-banner-sdk {
-				background-color: @surface0;
-			}
-			
-			a {
-				color: @accent-color !important;
-			}
-			
-			#onetrust-policy-title, #onetrust-policy-text, .ot-b-addl-desc, .ot-dpd-desc, .ot-dpd-title, #onetrust-policy-text :not(.onetrust-vendors-list-handler), .ot-dpd-desc :not(.onetrust-vendors-list-handler), #onetrust-banner-sdk #banner-options *, #onetrust-banner-sdk .ot-cat-header, #onetrust-banner-sdk .ot-optout-signal {
-				color: @text;
-			}
-			
-			#onetrust-accept-btn-handler, #onetrust-reject-all-handler {
-				background-color: @accent-color;
-				border-color: @accent-color;
-				color: @crust;
-			}
-			
-			#onetrust-pc-btn-handler {
-				&, &.cookie-setting-link {
-					color: @text;
-					border-color: @surface1;
-					background-color: @surface1;
-					
-					&:hover {
-						border-color: @base;
-						background-color: @base;
-					}
-				}
-			}
-		}
-		
-		.pinning-header .main-header.menu-navigation {
-			background-image: none;
-		}
-		
-		.previewModal--container {
-			color: @text;
-			box-shadow: fadeout(@crust, 25%) 0px 3px 10px !important;
-			
-			.previewModal-back svg, .previewModal-close svg {
-				background-color: @surface0;
-				
-				path {
-					fill: @text;
-				}
-			}
-			
-			.previewModal--info {
-				background-color: @surface0;
-			}
-			
-			.match-score {
-				color: @green;
-			}
-		}
-		
-		.previewModal {
-			&--player_container {
-				background-color: @surface0;
-			}
-			
-			&--detailsMetadata {
-				background-color: @surface0;
-			}
-			
-			&--wrapper button.color-supplementary:not(.hasLabel) {
-				background-color: @surface0;
-				border-color: @overlay2;
-				
-				&:hover {
-					background-color: @overlay0;
-				}
-			}
-			
-			&--tags {
-				&-label {
-					color: @overlay1;
-				}
-			}
-			
-			&--metadatAndControls {
-				background-color: @surface0;
-			}
-		}
-		
-		.previewModal--player_container.detail-modal .previewModal--player-titleTreatmentWrapper {
-			background: linear-gradient(0deg, @surface0, transparent 25%);
-		}
-		
-		.player-feature-badge {
-			border-color: @overlay0;
-			color: @text;
-		}
-		
-		.episodeSelector {
-			background-color: @surface0;
-			
-			.episodeSelector-container .episode-item.current {
-				background-color: @surface1;
-			}
-		}
-		
-		.ltr-11vo9g5.round.color-supplementary {
-			color: @text;
-		}
-		
-		.section-divider {
-			border-bottom-color: @surface1;
-			
-			&.collapsed {
-				background-image: linear-gradient(0deg, @surface0 0, fadeout(@surface0, 30%) 20%, fadeout(@surface0, 60%) 30%, transparent 50%)
-			}
-		}
-		
-		.titleCardList--container {
-			border-bottom-color: @surface1;
-				
-			&:first-of-type {
-				border-top-color: @surface1;
-			}
-			
-			.titleCard-title_index {
-				color: @text;
-			}
-			
-			.titleCardList--metadataWrapper {
-				.titleCard-synopsis {
-					color: @subtext1;
-				}
-				
-				.titleCardList-title .titleCard-title_text {
-					color: @text;
-				}
-			}
-		}
-		
-		.titleGroup--wrapper {
-			background-color: @surface0;
-		}
-		
-		.titleCard--container {
-			.titleCard--metadataWrapper {
-				background-color: @surface1;
-				
-				.titleCard-synopsis {
-					color: @subtext1;
-				}
-				
-				.titleCard-title .titleCard-title_text {
-					color: @text;
-				}
-			}
-		}
-		
-		.moreLikeThis--wrapper {
-			background-color: @surface0;
-		}
-		
-		.trailersAndMore--wrapper {
-			background-color: @surface0;
-		}
-		
-		.videoMetadata--container {
-			color: @text;
-			
-			.videoMetadata--second-line {
-				color: @subtext0;
-			}
-		}
-		
-		.about-wrapper {
-			background-color: @surface0;
-			
-			& .maturity-rating-wrapper span.title {
-				color: @overlay1;
-			}
-		}
-		
-		.maturity-rating .maturity-number {
-			border-color: @overlay0;
-		}
-		
-		.billboard-row .billboard .hero-image-wrapper .hero-vignette {
-			background-image: linear-gradient(180deg, fadeout(@mantle, 100%) 0, fadeout(@mantle, 75%) 25%, fadeout(@mantle, 60%) 40%, fadeout(@base, 40%) 60%, fadeout(@base, 25%) 75%, fadeout(@base, 0%) 100%)
-		}
-		
-		.main-header {
-			background-color: @base !important;
-		}
-		
-		.svg-icon-top-10-badge rect {
-			fill: @red;
-		}
-		
-		.image-text-notification .text {
-			color: @text;
-			
-			&:hover {
-				color: @subtext0;
-			}
-		}
-		
-		.notifications {
-			.notification {
-				border-bottom-color: @overlay1;
-				background-color: transparent;
-				
-				&:hover {
-					background-color: fadeout(@surface1, 30%);
-				}
-			}
-			
-			.notifications-menu {
-				.callout-arrow {
-					border-bottom-color: @overlay1;
-				}
-			}
-		}
-		
-		.image-text-notification .age {
-			color: @subtext0;
-		}
-		
-		.sub-menu.theme-lakira {
-			color: @text;
-			background-color: fadeout(@mantle, 30%);
-				
-			& > .topbar {
-				background-color: @overlay1;
-			}
-			
-			.sub-menu-link {
-				color: @text;
-			}
-		}
-		
-		.akira-header, .pinning-header {
-			& .account-drop-down .sign-out-links {
-				border-top-color: fadeout(@overlay1, 75%);
-			}
-		}
-		
-		.service-code {
-			border-color: @overlay1;
-			color: @subtext0;
-			
-			&:hover {
-				color: @text;
-			}
-		}
-		
-		.member-footer {
-			color: @subtext0;
-			
-			.member-footer-link {
-				color: @subtext1;
-			}
-		}
-		
-		.top-10-rank {
-			path {
-				fill: @crust;
-				stroke: @overlay0;
-			}
-		}
-		
-		.searchInput {
-			background-color: @mantle;
-			border-color: @overlay0;
-			
-			input {
-				color: @text;
-				
-				&::placeholder {
-					color: @subtext0;
-				}
-			}
-		}
-		
-		.search-icon path {
-			fill: @text;
-		}
-		
-		.pinning-header {
-			.tabbed-primary-navigation .navigation-tab {
-				a {
-					color: @text;
-					
-					&:hover, &:focus {
-						color: @overlay2;
-					}
-					
-				}
-			}
-			
-			.secondary-navigation .nav-element {
-				a.sub-menu-link-icon svg {
-					color: @subtext1;
-				}
-			}
-		}
-		
-		.ltr-podnco {
-			&.color-primary {
-				background-color: @text;
-				color: @mantle;
+        
+        a {
+            color: @text;
+        }
+        
+        body, html {
+            color: @text;
+            background-color: @base;
+        }
+        
+        .profiles-gate-container {
+            background-color: @base;
+            
+            .profile-icon {
+                background-color: @mantle;
+            }
+            
+            .profile-name {
+                color: @subtext0;
+            }
+            
+            li a {
+                &.focused, &:focus, &:hover {
+                    .profile-name {
+                        color: @text;
+                    }
+                    
+                    .profile-icon {
+                        &, &::after {
+                            border-color: @text;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .profile-button {
+            color: @text;
+            border-color: @overlay0;
+            background-color: @base;
+            
+            &:hover {
+                background-color: @mantle;
+            }
+            
+            &.preferred-action {
+                &.preferred-active, &:focus, &:hover {
+                    border-color: @accent-color;
+                }
+            }
+        }
+        
+        .list-profiles {
+            .profile-gate-label {
+                color: @text;
+            }
+        }
+        
+        .svg-icon-edit {
+            fill: @text;
+        }
+        
+        #onetrust-consent-sdk {
+            box-shadow: unset;
+            
+            #onetrust-banner-sdk {
+                background-color: @surface0;
+            }
+            
+            a {
+                color: @accent-color !important;
+            }
+            
+            #onetrust-policy-title, #onetrust-policy-text, .ot-b-addl-desc, .ot-dpd-desc, .ot-dpd-title, #onetrust-policy-text :not(.onetrust-vendors-list-handler), .ot-dpd-desc :not(.onetrust-vendors-list-handler), #onetrust-banner-sdk #banner-options *, #onetrust-banner-sdk .ot-cat-header, #onetrust-banner-sdk .ot-optout-signal {
+                color: @text;
+            }
+            
+            #onetrust-accept-btn-handler, #onetrust-reject-all-handler {
+                background-color: @accent-color;
+                border-color: @accent-color;
+                color: @crust;
+            }
+            
+            #onetrust-pc-btn-handler {
+                &, &.cookie-setting-link {
+                    color: @text;
+                    border-color: @surface1;
+                    background-color: @surface1;
+                    
+                    &:hover {
+                        border-color: @base;
+                        background-color: @base;
+                    }
+                }
+            }
+        }
+        
+        .pinning-header .main-header.menu-navigation {
+            background-image: none;
+        }
+        
+        .previewModal--container {
+            color: @text;
+            box-shadow: fadeout(@crust, 25%) 0px 3px 10px !important;
+            
+            .previewModal-back svg, .previewModal-close svg {
+                background-color: @surface0;
+                
+                path {
+                    fill: @text;
+                }
+            }
+            
+            .previewModal--info {
+                background-color: @surface0;
+            }
+            
+            .match-score {
+                color: @green;
+            }
+        }
+        
+        .previewModal {
+            &--player_container {
+                background-color: @surface0;
+            }
+            
+            &--detailsMetadata {
+                background-color: @surface0;
+            }
+            
+            &--wrapper button.color-supplementary:not(.hasLabel) {
+                background-color: @surface0;
+                border-color: @overlay2;
+                
+                &:hover {
+                    background-color: @overlay0;
+                }
+            }
+            
+            &--tags {
+                &-label {
+                    color: @overlay1;
+                }
+            }
+            
+            &--metadatAndControls {
+                background-color: @surface0;
+            }
+        }
+        
+        .previewModal--player_container.detail-modal .previewModal--player-titleTreatmentWrapper {
+            background: linear-gradient(0deg, @surface0, transparent 25%);
+        }
+        
+        .player-feature-badge {
+            border-color: @overlay0;
+            color: @text;
+        }
+        
+        .episodeSelector {
+            background-color: @surface0;
+            
+            .episodeSelector-container .episode-item.current {
+                background-color: @surface1;
+            }
+        }
+        
+        .ltr-11vo9g5.round.color-supplementary {
+            color: @text;
+        }
+        
+        .section-divider {
+            border-bottom-color: @surface1;
+            
+            &.collapsed {
+                background-image: linear-gradient(0deg, @surface0 0, fadeout(@surface0, 30%) 20%, fadeout(@surface0, 60%) 30%, transparent 50%)
+            }
+        }
+        
+        .titleCardList--container {
+            border-bottom-color: @surface1;
+                
+            &:first-of-type {
+                border-top-color: @surface1;
+            }
+            
+            .titleCard-title_index {
+                color: @text;
+            }
+            
+            .titleCardList--metadataWrapper {
+                .titleCard-synopsis {
+                    color: @subtext1;
+                }
+                
+                .titleCardList-title .titleCard-title_text {
+                    color: @text;
+                }
+            }
+        }
+        
+        .titleGroup--wrapper {
+            background-color: @surface0;
+        }
+        
+        .titleCard--container {
+            .titleCard--metadataWrapper {
+                background-color: @surface1;
+                
+                .titleCard-synopsis {
+                    color: @subtext1;
+                }
+                
+                .titleCard-title .titleCard-title_text {
+                    color: @text;
+                }
+            }
+        }
+        
+        .moreLikeThis--wrapper {
+            background-color: @surface0;
+        }
+        
+        .trailersAndMore--wrapper {
+            background-color: @surface0;
+        }
+        
+        .videoMetadata--container {
+            color: @text;
+            
+            .videoMetadata--second-line {
+                color: @subtext0;
+            }
+        }
+        
+        .about-wrapper {
+            background-color: @surface0;
+            
+            & .maturity-rating-wrapper span.title {
+                color: @overlay1;
+            }
+        }
+        
+        .maturity-rating .maturity-number {
+            border-color: @overlay0;
+        }
+        
+        .billboard-row .billboard .hero-image-wrapper .hero-vignette {
+            background-image: linear-gradient(180deg, fadeout(@mantle, 100%) 0, fadeout(@mantle, 75%) 25%, fadeout(@mantle, 60%) 40%, fadeout(@base, 40%) 60%, fadeout(@base, 25%) 75%, fadeout(@base, 0%) 100%)
+        }
+        
+        .main-header {
+            background-color: @base !important;
+        }
+        
+        .svg-icon-top-10-badge rect {
+            fill: @red;
+        }
+        
+        .image-text-notification .text {
+            color: @text;
+            
+            &:hover {
+                color: @subtext0;
+            }
+        }
+        
+        .notifications {
+            .notification {
+                border-bottom-color: @overlay1;
+                background-color: transparent;
+                
+                &:hover {
+                    background-color: fadeout(@surface1, 30%);
+                }
+            }
+            
+            .notifications-menu {
+                .callout-arrow {
+                    border-bottom-color: @overlay1;
+                }
+            }
+        }
+        
+        .image-text-notification .age {
+            color: @subtext0;
+        }
+        
+        .sub-menu.theme-lakira {
+            color: @text;
+            background-color: fadeout(@mantle, 30%);
+                
+            & > .topbar {
+                background-color: @overlay1;
+            }
+            
+            .sub-menu-link {
+                color: @text;
+            }
+        }
+        
+        .akira-header, .pinning-header {
+            & .account-drop-down .sign-out-links {
+                border-top-color: fadeout(@overlay1, 75%);
+            }
+        }
+        
+        .service-code {
+            border-color: @overlay1;
+            color: @subtext0;
+            
+            &:hover {
+                color: @text;
+            }
+        }
+        
+        .member-footer {
+            color: @subtext0;
+            
+            .member-footer-link {
+                color: @subtext1;
+            }
+        }
+        
+        .top-10-rank {
+            path {
+                fill: @crust;
+                stroke: @overlay0;
+            }
+        }
+        
+        .searchInput {
+            background-color: @mantle;
+            border-color: @overlay0;
+            
+            input {
+                color: @text;
+                
+                &::placeholder {
+                    color: @subtext0;
+                }
+            }
+        }
+        
+        .search-icon path {
+            fill: @text;
+        }
+        
+        .pinning-header {
+            .tabbed-primary-navigation .navigation-tab {
+                a {
+                    color: @text;
+                    
+                    &:hover, &:focus {
+                        color: @overlay2;
+                    }
+                    
+                }
+            }
+            
+            .secondary-navigation .nav-element {
+                a.sub-menu-link-icon svg {
+                    color: @subtext1;
+                }
+            }
+        }
+        
+        .ltr-podnco {
+            &.color-primary {
+                background-color: @text;
+                color: @mantle;
 
-				&:not(:disabled):hover {
-					background-color: fadeout(@text, 25%);
-				}
-			}
-		}
-		
-		.ltr-18ezbm2 {
-			&.color-secondary {
-				background-color: fadeout(@surface0, 30%);
-				color: @text;
-					
-				&:not(:disabled):hover {
-					background-color: fadeout(@surface0, 60%);
-				}
-			}
-		}
-		
-		.lolomoRow {
-			.pagination-indicator {
-				li {
-					background-color: fadeout(@overlay2, 70%);
-				}
-				
-				.active {
-					background-color: @overlay2;
-				}
-			}
-			
-			&.lolomoRow_title_card .rowTitle {
-				color: @text;
-				
-				.aro-row-header.more-visible {
-					.aro-row-chevron, .see-all-link {
-						color: @accent-color;
-					}
-				}
-			}
-			
-			&.lolomoPreview {
-				.loadingTitle {
-					border-color: @base;
-				}
-				
-				.rowTitle {
-					background-color: @mantle;
-				}
-			}
-		}
-		
-		.progress-bar {
-			background-color: fadeout(@overlay2, 70%);
-		}
-		
-		@keyframes pulsateAnimation {
-			0% {
-				background-color: @mantle;
-			}
-			25% {
-				background-color: @surface0;
-			}
-			50% {
-				background-color: @mantle;
-			}
-			to {
-				background-color: @mantle;
-			}
-		}
-		@keyframes pulsateTransparentAnimation {
-			0% {
-				background-color:transparent;
-			}
-			25% {
-				background-color: @surface0;
-			}
-			50% {
-				background-color:transparent;
-			}
-			to {
-				background-color:transparent;
-			}
-		}		
-		.progress-completed {
-			background-color: @accent-color;
-		}
-		
-		.fallback-text-container {
-			background-color: @mantle;
-			background-image: linear-gradient(transparent, @mantle);
-		}
-		
-		.rowContainer .rowContent .slider .handle {
-			background-color: fadeout(@mantle, 50%);
-			
-			&:hover {
-				background-color: fadeout(@mantle, 30%);
-			}
-		}
-		
-		.slider-hover-trigger-layer:hover .slider .handle.active:hover .indicator-icon {
-			color: @text;
-		}
-		
-		.member-header {
-			background-color: @base;
-		}
-		
-		.profileTransferLayout .bd {
-			&::before {
-				background-color: @base;
-				background-image: none;
-			}
-		}
-		
-		/* /account */
-		.default-ltr-cache {
-			&-10d6829 {
-				background-color: @base;
-			}
-			
-			&-1v6mgd3 {
-				background-color: @base;
-				
-				&::before {
-					box-shadow: 0 0.625rem 1.25 -0.625rem fadeout(@crust, 60%);
-				}
-			}
-			
-			&-ksqt71 {
-				color: @text;
-			}
-			
-			&-1770zn1 {
-				color: @subtext0;
-				
-				&:hover {
-					background-color: @surface0;
-				}
-			}
-			
-			&-ex3yn6 {
-				color: @text;
-				
-				&:not([aria-disabled]):hover::after {
-					border-color: @crust;
-				}
-			}
-			
-			&-1dkytci {
-				color: @text;
-			}
-			
-			&-q8smu4 {
-				border-color: fadeout(@surface0, 60%);
-				background-color: @base;
-			}
-			
-			&-ycjevn, &-zao4k6 {
-				background: linear-gradient(to left, @red, @mauve, @blue);
-				color: @crust;
-			}
-			
-			&-10ajupv {
-				color: @text;
-			}
-			
-			&-15y3y0p {
-				color: @text;
-			}
-			
-			&-1nd33fh {
-				color: @text;
-			}
-			
-			&-jb5jnd {
-				color: @text;
-				background-color: @base;
-				
-				&:first-of-type::before {
-					border-top-color: @overlay0;
-				}
-			}
-			
-			&-1s4ap8e {
-				color: @text;
-			}
-			
-			&-sqf9n0 {
-				&:not([aria-disabled]):hover {
-					background-color: @surface0;
-				}
-			}
-			
-			&-7c4hi5 {
-				color: @text;
-			}
-			
-			&-tnq1qy {
-				color: @text;
-			}
-			
-			&-rfdzh3 {
-				color: @text;
-			}
-			
-			&-ngj9jo {
-				color: @text;
-				background-color: @base;
-				
-				&:not(:first-of-type)::before {
-					border-top-color: @overlay0;
-				}
-			}
-			
-			&-1qbt4zl {
-				color: @red;
-				
-				&::after {
-					border-color: @overlay0;
-				}
-				
-				&:not([aria-disabled]):hover {
-					background-color: @mantle;
-						
-					&::after {
-						border-color: @overlay0;
-					}
-				}
-			}
-			
-			&-w6a8nx {
-				color: @text;
-			}
-		}
+                &:not(:disabled):hover {
+                    background-color: fadeout(@text, 25%);
+                }
+            }
+        }
+        
+        .ltr-18ezbm2 {
+            &.color-secondary {
+                background-color: fadeout(@surface0, 30%);
+                color: @text;
+                    
+                &:not(:disabled):hover {
+                    background-color: fadeout(@surface0, 60%);
+                }
+            }
+        }
+        
+        .lolomoRow {
+            .pagination-indicator {
+                li {
+                    background-color: fadeout(@overlay2, 70%);
+                }
+                
+                .active {
+                    background-color: @overlay2;
+                }
+            }
+            
+            &.lolomoRow_title_card .rowTitle {
+                color: @text;
+                
+                .aro-row-header.more-visible {
+                    .aro-row-chevron, .see-all-link {
+                        color: @accent-color;
+                    }
+                }
+            }
+            
+            &.lolomoPreview {
+                .loadingTitle {
+                    border-color: @base;
+                }
+                
+                .rowTitle {
+                    background-color: @mantle;
+                }
+            }
+        }
+        
+        .progress-bar {
+            background-color: fadeout(@overlay2, 70%);
+        }
+
+        video[style*="height: 1589px;"] {
+            height: auto !important;
+        }
+        
+        @keyframes pulsateAnimation {
+            0% {
+                background-color: @mantle;
+            }
+            25% {
+                background-color: @surface0;
+            }
+            50% {
+                background-color: @mantle;
+            }
+            to {
+                background-color: @mantle;
+            }
+        }
+        @keyframes pulsateTransparentAnimation {
+            0% {
+                background-color:transparent;
+            }
+            25% {
+                background-color: @surface0;
+            }
+            50% {
+                background-color:transparent;
+            }
+            to {
+                background-color:transparent;
+            }
+        }        
+        .progress-completed {
+            background-color: @accent-color;
+        }
+        
+        .fallback-text-container {
+            background-color: @mantle;
+            background-image: linear-gradient(transparent, @mantle);
+        }
+        
+        .rowContainer .rowContent .slider .handle {
+            background-color: fadeout(@mantle, 50%);
+            
+            &:hover {
+                background-color: fadeout(@mantle, 30%);
+            }
+        }
+        
+        .slider-hover-trigger-layer:hover .slider .handle.active:hover .indicator-icon {
+            color: @text;
+        }
+        
+        .member-header {
+            background-color: @base;
+        }
+        
+        .profileTransferLayout .bd {
+            &::before {
+                background-color: @base;
+                background-image: none;
+            }
+        }
+        
+        /* /account */
+        .default-ltr-cache {
+            &-10d6829 {
+                background-color: @base;
+            }
+            
+            &-1v6mgd3 {
+                background-color: @base;
+                
+                &::before {
+                    box-shadow: 0 0.625rem 1.25 -0.625rem fadeout(@crust, 60%);
+                }
+            }
+            
+            &-ksqt71 {
+                color: @text;
+            }
+            
+            &-1770zn1 {
+                color: @subtext0;
+                
+                &:hover {
+                    background-color: @surface0;
+                }
+            }
+            
+            &-ex3yn6 {
+                color: @text;
+                
+                &:not([aria-disabled]):hover::after {
+                    border-color: @crust;
+                }
+            }
+            
+            &-1dkytci {
+                color: @text;
+            }
+            
+            &-q8smu4 {
+                border-color: fadeout(@surface0, 60%);
+                background-color: @base;
+            }
+            
+            &-ycjevn, &-zao4k6 {
+                background: linear-gradient(to left, @red, @mauve, @blue);
+                color: @crust;
+            }
+            
+            &-10ajupv {
+                color: @text;
+            }
+            
+            &-15y3y0p {
+                color: @text;
+            }
+            
+            &-1nd33fh {
+                color: @text;
+            }
+            
+            &-jb5jnd {
+                color: @text;
+                background-color: @base;
+                
+                &:first-of-type::before {
+                    border-top-color: @overlay0;
+                }
+            }
+            
+            &-1s4ap8e {
+                color: @text;
+            }
+            
+            &-sqf9n0 {
+                &:not([aria-disabled]):hover {
+                    background-color: @surface0;
+                }
+            }
+            
+            &-7c4hi5 {
+                color: @text;
+            }
+            
+            &-tnq1qy {
+                color: @text;
+            }
+            
+            &-rfdzh3 {
+                color: @text;
+            }
+            
+            &-ngj9jo {
+                color: @text;
+                background-color: @base;
+                
+                &:not(:first-of-type)::before {
+                    border-top-color: @overlay0;
+                }
+            }
+            
+            &-1qbt4zl {
+                color: @red;
+                
+                &::after {
+                    border-color: @overlay0;
+                }
+                
+                &:not([aria-disabled]):hover {
+                    background-color: @mantle;
+                        
+                    &::after {
+                        border-color: @overlay0;
+                    }
+                }
+            }
+            
+            &-w6a8nx {
+                color: @text;
+            }
+        }
   }
 
   @media (prefers-color-scheme: light) {
