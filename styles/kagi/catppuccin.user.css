@@ -1,0 +1,657 @@
+/* ==UserStyle==
+@name Kagi Catppuccin
+@namespace github.com/phoreverpheebs/userstyles/styles/kagi
+@homepageURL https://github.com/phoreverpheebs/userstyles/tree/master/styles/kagi
+@version 0.0.1
+@updateURL https://github.com/phoreverpheebs/userstyles/raw/master/styles/kagi/catppuccin.user.css
+@supportURL https://github.com/phoreverpheebs/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3AKagi
+@description Soothing pastel theme for Kagi
+@author phoebe
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@-moz-document domain('kagi.com') {
+  @media (prefers-color-scheme: light) {
+    :root {
+      #catppuccin(@lightFlavor, @accentColor);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      #catppuccin(@darkFlavor, @accentColor);
+    }
+  }
+	
+	html.theme_light:not(.theme_moon_dark_conditional) {
+		#catppuccin(@lightFlavor, @accentColor);
+	}
+	
+	html.theme_moon_dark {
+		#catppuccin(@darkFlavor, @accentColor);
+	}
+
+  #catppuccin(@lookup, @accent) {
+    @rosewater: @catppuccin[@@lookup][@rosewater];
+    @flamingo: @catppuccin[@@lookup][@flamingo];
+    @pink: @catppuccin[@@lookup][@pink];
+    @mauve: @catppuccin[@@lookup][@mauve];
+    @red: @catppuccin[@@lookup][@red];
+    @maroon: @catppuccin[@@lookup][@maroon];
+    @peach: @catppuccin[@@lookup][@peach];
+    @yellow: @catppuccin[@@lookup][@yellow];
+    @green: @catppuccin[@@lookup][@green];
+    @teal: @catppuccin[@@lookup][@teal];
+    @sky: @catppuccin[@@lookup][@sky];
+    @sapphire: @catppuccin[@@lookup][@sapphire];
+    @blue: @catppuccin[@@lookup][@blue];
+    @lavender: @catppuccin[@@lookup][@lavender];
+    @text: @catppuccin[@@lookup][@text];
+    @subtext1: @catppuccin[@@lookup][@subtext1];
+    @subtext0: @catppuccin[@@lookup][@subtext0];
+    @overlay2: @catppuccin[@@lookup][@overlay2];
+    @overlay1: @catppuccin[@@lookup][@overlay1];
+    @overlay0: @catppuccin[@@lookup][@overlay0];
+    @surface2: @catppuccin[@@lookup][@surface2];
+    @surface1: @catppuccin[@@lookup][@surface1];
+    @surface0: @catppuccin[@@lookup][@surface0];
+    @base: @catppuccin[@@lookup][@base];
+    @mantle: @catppuccin[@@lookup][@mantle];
+    @crust: @catppuccin[@@lookup][@crust];
+    @accent-color: @catppuccin[@@lookup][@@accent];
+
+    color-scheme: if(@lookup = latte, light, dark);
+
+    background-color: @base;
+		
+		body {
+			color: @text;
+			background-color: @base;
+		}
+
+    ::selection {
+      background-color: fade(@accent-color, 30%);
+    }
+
+    input,
+    textarea {
+      &::placeholder {
+        color: @subtext0 !important;
+      }
+    }
+		
+		*, ::after, ::before {
+			border-color: @overlay0;
+		}
+		
+		.btn {
+			color: @text;
+			
+			&.--primary, &.--secondary {
+				border-color: @overlay0;
+				background-color: @mantle;
+				color: @text;
+
+				&:hover {
+					background-color: @crust;
+				}
+			}
+		}
+		
+		.search-form {
+			.search-input-container, .search-input-container-kids {
+				background-color: @surface0;
+				border: none;
+			}
+			
+			.search_area {
+				background-color: @surface0;
+			}
+			
+			.spt {
+				background: none;
+			}
+			
+			.search-form-icons {
+				.clear-search {
+					color: @subtext0;
+					
+					&:hover {
+						color: @text;
+					}
+				}
+			}
+		}
+		
+		.land_adv_search_btn {
+			color: @subtext0;
+		}
+		
+		[fill="white"] {
+			fill: @text !important;
+		}
+		
+		[fill="#FFB319"] {
+			fill: @peach !important;
+		}
+		
+		[fill="#18181A"] {
+			fill: @crust !important;
+		}
+		
+		.auto_suggestions {
+			.auto_suggestions_in {
+				border: none;
+			}
+			
+			background-color: @surface0;
+			border: none;
+			
+			.auto_item {
+				&.highlighted {
+					background-color: @surface1;
+				}
+			}
+			
+			svg {
+				color: @text;
+			}
+		}
+		
+		.logo {
+			color: @accent-color;
+		}
+		
+		.vp-doc {
+			a {
+				color: @accent-color;
+			}
+			
+			:not(pre) {
+				& > code {
+					color: @text;
+					background-color: @mantle;
+				}
+			}
+		}
+		
+		.VPSidebar {
+			background-color: @mantle;
+		}
+		
+		.curtain {
+			background-color: @mantle;
+		}
+		
+		.aside-curtain {
+			background: none;
+			background-color: @base;
+		}
+		
+		.VPNavBar.has-sidebar {
+			.curtain::before {
+				background: none;
+				background-color: @base;
+			}
+			
+			.content-body {
+				background-color: @base;
+			}
+		}
+		
+		.sfi_sep {
+			background-color: @subtext0;
+		}
+		
+		.serp-nav .nav_item {
+			color: @text;
+			
+			&.n_se, &.n_im, &.n_vi, &.n_ne, &.n_ma {
+				&::after {
+					border-color: @accent-color;
+				}
+			}
+			
+		}
+		
+		.k_ui_dropdown_data_list {
+			background-color: @surface0;
+			border-color: @overlay0;
+			color: @text;
+			
+			.list_items {
+				
+				& > ._0_k_ui_dropdown_li, & > a, & > div {
+					color: @text;
+					
+					&.__hover, &:focus-visible, &:hover {
+						color: @text;
+						background-color: @surface1;
+					}
+				}
+			}
+		}
+		
+		.__sri-title .__sri_title_link,
+		.__srgi-title a,
+		.wikipediaResult .wiki-title a {
+			color: @text;
+			border-bottom-color: @text;
+			
+			&:hover {
+				border-bottom-color: @accent-color;
+				color: @accent-color;
+			}
+			
+			&:visited {
+				border-bottom-color: @mauve;
+				color: @mauve;
+			}
+		}
+		
+		.__sri-url {
+			color: @subtext1;
+			
+			&:hover {
+				color: @subtext0;
+			}
+			
+			.path {
+				color: @subtext1;
+			}
+		}
+		
+		.__sri-desc {
+			color: @subtext0;
+		}
+		
+		.__sri-time {
+			background-color: @surface0;
+			color: @subtext1;
+		}
+		
+		.inlineHeader {
+			color: @text;
+		}
+		
+		.wiki-desc-box {
+			color: @subtext0;
+		}
+		
+		.wikipediaResult {
+			a {
+				color: @subtext1;
+				border-bottom-color: @subtext1;
+			}
+			
+			.wiki-sub-title {
+				color: @subtext1;
+			}
+			
+			td span {
+				color: @subtext1;
+			}
+		}
+		
+		.smw {
+			&:hover {
+				color: @accent-color;
+			}
+		}
+		
+		.__sri_more_menu {
+			&._0_k_ui_dropdown {
+				.k_ui_dropdown_first_item {
+					i {
+						color: @text;
+					}
+				}
+			}
+		}
+		
+		._0_rank-icons {
+			svg {
+				color: @text;
+			}
+		}
+		
+		.related-items {
+			a {
+				background-color: @surface0;
+				color: @text;
+			}
+		}
+		
+		.sidebar-filter-nav-form .sidebar-filter-nav > .filter-item .dd-list {
+			background-color: @surface0;
+			border-color: @overlay0;
+			
+			input[type="search"] {
+				color: @text;
+				background-color: @mantle;
+				border-color: @surface2;
+			}
+		}
+		
+		:focus-visible {
+			outline-color: @accent-color;
+		}
+		
+		#top-parent {
+			color: @subtext0;
+			
+			a, i {
+				color: @subtext1;
+			}
+		}
+		
+		.dropdown .dd-toggle-label {
+			color: @text;
+			
+			&::before {
+				background-color: transparent;
+			}
+		}
+		
+		.c-p {
+			color: @text;
+		}
+		
+		._0_summarize_link a {
+			color: @text;
+		}
+		
+		.quick-settings {
+			background-color: @mantle;
+			border-left-color: @surface0;
+		}
+		
+		.bg-p-50 {
+			background-color: @surface0;
+		}
+		
+		._0_app_theme_switch_box button {
+			&.checked .theme_name, & > input:checked + .theme_name {
+				background-color: @accent-color;
+				color: @crust;
+			}
+			
+			.theme_name {
+				color: @text;
+				border-color: @surface0;
+			}
+		}
+		
+		.quick-settings a {
+			color: @text;
+		}
+		
+		.quick-settings-footer {
+			background-color: @mantle;
+			border-top-color: @surface0;
+		}
+		
+		._0_sri-w-highlight .quick-settings .nav-line.searchResultAnswer, .quick-settings ._0_sri-w-highlight .nav-line.searchResultAnswer, .quick-settings .nav-line.--active {
+			color: @accent-color;
+		}
+		
+		.quick-settings {
+			.setting, .settings-row {
+				.d, h3 {
+					color: @subtext0;
+				}
+			}
+			
+			.service-status-light {
+				background-color: @green;
+			}
+			
+			.qc-sec {
+				border-color: @surface0;
+			}
+		}
+		
+		#quickSettingsCloseBtn {
+			color: @text;
+		}
+		
+		.land_tooltip_message {
+			background-color: @surface0;
+			border-color: @overlay0;
+			color: @text;
+			
+			a {
+				color: @accent-color;
+			}
+		}
+		
+		nav {
+			.cth_settings_nav_menu {
+				.nav-link {
+					color: @text;
+					
+					&.--active {
+						color: @crust;
+						background-color: @accent-color;
+					}
+					
+					i {
+						color: @text;
+					}
+				}
+				
+				.nav-link-sub {
+					color: @text;
+					
+					&.--active, &:hover {
+						border-color: @accent-color;
+					}
+				}
+			}
+		}
+		
+		#settings-menu {
+			background-color: @base;
+		}
+		
+		main {
+			background-color: @base;
+		}
+		
+		.k_ui_dropdown {
+			&.__basic {
+				background-color: @mantle;
+				border-color: @surface1;
+				
+				.k_ui_dropdown_data_list {
+					background-color: @surface0;
+					border-color: @surface1;
+				}
+			}
+		}
+		
+		input:where(:not([type="checkbox"],[type="radio"])), select, textarea {
+			background-color: @mantle;
+			border-color: @surface1;
+		}
+		
+		a {
+			color: @accent-color;
+		}
+		
+		.c-left {
+			h3 {
+				color: @subtext0;
+			}
+		}
+		
+		.footer, footer {
+			.footerInner {
+				ul {
+					li {
+						a {
+							color: @subtext1;
+						}
+					}
+				}
+			}
+			
+			.copyright {
+				color: @subtext1;
+			}
+		}
+		
+		.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar {
+			&::after {
+				background-color: @mantle;
+				border-color: @accent-color;
+				box-shadow: none;
+			}
+			
+			background: none;
+			background-color: @accent-color;
+			box-shadow: 0 0 0 1px @accent-color;
+		}
+		
+		input[type="checkbox"]:checked {
+			&::before {
+				background-color: @accent-color;
+			}
+			
+			&::after {
+				background-color: @accent-color;
+			}
+		}
+		
+		.VPSidebarItem {
+			.level-0, .level-1, .level-2, .level-3, .level-4, .level-5 {
+				
+				
+				&.is-active {
+					& > .item > .link .text {
+						color: @accent-color;
+					}
+					
+					& > .item > .indicator {
+						background-color: @accent-color;
+					}
+				}
+				
+				&.is-link {
+					& > .item > .link {
+						&:hover {
+								.text {
+									color: @accent-color;
+							}
+						}
+					}
+				}
+			}
+			
+			.level-0 {
+				.text {
+					color: @text;
+				}
+			}
+		}
+		
+		.outline-marker {
+			background-color: @accent-color;
+		}
+		
+		.outline-link {
+			color: @subtext0;
+			
+			&:hover, &.active {
+				color: @text;
+			}
+		}
+		
+		.VPSwitch  {
+			border-color: @overlay0;
+			background-color: @surface0;
+		}
+		
+		.check {
+			background-color: @crust;
+		}
+		
+		.title {
+			color: @text;
+		}
+		
+		.VPNavBarMenuLink {
+			color: @text;
+			
+			&:hover, &.active {
+				color: @accent-color;
+			}
+		}
+		
+		.VPSocialLink {
+			color: @text;
+		}
+		
+		.cheatsh {
+			.hdr {
+				border-bottom-color: @overlay0;
+				
+				a {
+					color: @text;
+					
+					.path {
+						color: @subtext0;
+					}
+				}
+			}
+			
+			.cheatsh_content_wrpr {
+				&::after {
+					background-color: @base;
+				}
+			}
+			
+			.code {
+				background-color: @mantle;
+			}
+		}
+		
+		/* colours for code blocks */
+		.ef {
+			&15 {
+				color: @text;
+			}
+			
+			&81 {
+				color: @sky;
+			}
+			
+			&141 {
+				color: @mauve;
+			}
+			
+			&148 {
+				color: @green;
+			}
+			
+			&197 {
+				color: @red;
+			}
+		}
+  }
+}
+
+/* prettier-ignore */
+@catppuccin: {
+  @latte:     { @rosewater: #dc8a78; @flamingo: #dd7878; @pink: #ea76cb; @mauve: #8839ef; @red: #d20f39; @maroon: #e64553; @peach: #fe640b; @yellow: #df8e1d; @green: #40a02b; @teal: #179299; @sky: #04a5e5; @sapphire: #209fb5; @blue: #1e66f5; @lavender: #7287fd; @text: #4c4f69; @subtext1: #5c5f77; @subtext0: #6c6f85; @overlay2: #7c7f93; @overlay1: #8c8fa1; @overlay0: #9ca0b0; @surface2: #acb0be; @surface1: #bcc0cc; @surface0: #ccd0da; @base: #eff1f5; @mantle: #e6e9ef; @crust: #dce0e8; };
+  @frappe:    { @rosewater: #f2d5cf; @flamingo: #eebebe; @pink: #f4b8e4; @mauve: #ca9ee6; @red: #e78284; @maroon: #ea999c; @peach: #ef9f76; @yellow: #e5c890; @green: #a6d189; @teal: #81c8be; @sky: #99d1db; @sapphire: #85c1dc; @blue: #8caaee; @lavender: #babbf1; @text: #c6d0f5; @subtext1: #b5bfe2; @subtext0: #a5adce; @overlay2: #949cbb; @overlay1: #838ba7; @overlay0: #737994; @surface2: #626880; @surface1: #51576d; @surface0: #414559; @base: #303446; @mantle: #292c3c; @crust: #232634; };
+  @macchiato: { @rosewater: #f4dbd6; @flamingo: #f0c6c6; @pink: #f5bde6; @mauve: #c6a0f6; @red: #ed8796; @maroon: #ee99a0; @peach: #f5a97f; @yellow: #eed49f; @green: #a6da95; @teal: #8bd5ca; @sky: #91d7e3; @sapphire: #7dc4e4; @blue: #8aadf4; @lavender: #b7bdf8; @text: #cad3f5; @subtext1: #b8c0e0; @subtext0: #a5adcb; @overlay2: #939ab7; @overlay1: #8087a2; @overlay0: #6e738d; @surface2: #5b6078; @surface1: #494d64; @surface0: #363a4f; @base: #24273a; @mantle: #1e2030; @crust: #181926; };
+  @mocha:     { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #cdd6f4; @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b; };
+}
+
+// vim:ft=less
+
