@@ -229,6 +229,19 @@
 			}
 		}
 		
+		#searchresults a, .context a:link, a:visited, a > .hljs {
+			color: @accent-color;
+		}
+
+		.teaser {
+			color: @subtext1;
+		}
+
+		mark {
+			background-color: rgba(darken(@accent-color, 10%), 40%);
+			color: @text;
+		}
+
 		.searchresults-outer {
 			border-bottom-color: @subtext0;
 		}
@@ -289,6 +302,13 @@
 					}
 				}
 			}
+		}
+
+		blockquote {
+			background-color: @crust;
+			border: 1px solid @surface1;
+			border-radius: 4px;
+			color: @text;
 		}
 		
 		/* things past this comment apply to man.voidlinux.org */
